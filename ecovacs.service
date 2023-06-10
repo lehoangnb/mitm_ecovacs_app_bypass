@@ -1,0 +1,11 @@
+[Unit]
+Description=Ecovacs mitm script
+
+[Service]
+User=root
+WorkingDirectory=/root/mitm
+ExecStart=/bin/bash -c "/root/mitm/run.sh >> /dev/null"
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
